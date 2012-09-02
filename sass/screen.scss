@@ -1,0 +1,112 @@
+@import "compass/reset";
+@import "blueprint/typography";
+@import "compass/css3/border-radius";
+@import "compass/typography/lists";
+@import "compass/typography/links/hover-link";
+@import "susy";
+
+$blueprint-font-size: 14px;
+
+$total-columns: 9;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+@include blueprint-typography;
+
+@mixin social-profile {
+  ul {
+    @include inline-block-list;
+
+    li {
+      margin: 0 1em 0 0;
+
+      &:last-of-type {
+        margin: 0
+      }
+
+      a {
+        @include hover-link;
+      }
+    }
+  }
+}
+
+.wrapper {
+  @include container;
+  margin: 2em auto 4em;
+}
+
+header, footer {
+  clear: both;
+}
+
+.wrapper > header {
+  @include pie-clearfix;
+
+  margin-bottom: 4em;
+
+  img {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+  }
+
+  section#photo {
+    @include span-columns(2);
+  }
+
+  section#name-job-social {
+    @include span-columns(7 omega);
+
+    margin-top: 0.5em;
+
+    hgroup {
+      margin-bottom: 1em;
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 0.25em;
+      }
+
+      h2 {
+        font-size: 1.25em;
+        margin-bottom: 0;
+      }
+    }
+
+    nav {
+      @include social-profile;
+    }
+  }
+}
+
+.wrapper > section {
+  header {
+    margin-bottom: 1em;
+
+    h1 {
+      font-size: 2em;
+      padding-bottom: 0.25em;
+      border-bottom: 2px solid lightgray;
+    }
+  }
+
+  h2 {
+    display: inline;
+    font-size: 1.25em;
+  }
+
+  ul {
+    @include no-bullets;
+    margin: 0;
+    padding: 0;
+  }
+
+  time {
+    font-size: 0.9em;
+    background: #eee;
+    padding: 0 0.5em;
+    @include border-radius(5px);
+    float: right;
+  }
+}

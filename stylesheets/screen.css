@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+body { line-height: 1.5; font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; color: #333333; font-size: 87.5%; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: #222222; }
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.50em; }
+
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1.00em; }
+
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.50em; }
+
+h6 { font-size: 1em; font-weight: bold; }
+
+p { margin: 0 0 1.5em; }
+p .left { display: inline; float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p .right { display: inline; float: right; margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+a { text-decoration: underline; color: #0066cc; }
+a:visited { color: #004c99; }
+a:focus { color: #0099ff; }
+a:hover { color: #0099ff; }
+a:active { color: #bf00ff; }
+
+blockquote { margin: 1.5em; color: #666666; font-style: italic; }
+
+strong, dfn { font-weight: bold; }
+
+em, dfn { font-style: italic; }
+
+sup, sub { line-height: 0; }
+
+abbr, acronym { border-bottom: 1px dotted #666666; }
+
+address { margin: 0 0 1.5em; font-style: italic; }
+
+del { color: #666666; }
+
+pre { margin: 1.5em 0; white-space: pre; }
+
+pre, code, tt { font: 1em "andale mono", "lucida console", monospace; line-height: 1.5; }
+
+li ul, li ol { margin: 0; }
+
+ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 1.5em; }
+
+ul { list-style-type: disc; }
+
+ol { list-style-type: decimal; }
+
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+
+dd { margin-left: 1.5em; }
+
+table { margin-bottom: 1.4em; width: 100%; }
+
+th { font-weight: bold; }
+
+thead th { background: #c3d9ff; }
+
+th, td, caption { padding: 4px 10px 4px 5px; }
+
+table.striped tr:nth-child(even) td, table tr.even td { background: #e5ecf9; }
+
+tfoot { font-style: italic; }
+
+caption { background: #eeeeee; }
+
+.quiet { color: #666666; }
+
+.loud { color: #111111; }
+
+.wrapper { *zoom: 1; max-width: 44em; _width: 44em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; margin: 2em auto 4em; }
+.wrapper:after { content: ""; display: table; clear: both; }
+
+header, footer { clear: both; }
+
+.wrapper > header { *zoom: 1; margin-bottom: 4em; }
+.wrapper > header:after { content: ""; display: table; clear: both; }
+.wrapper > header img { border: 1px solid lightgray; padding: 0.5em; }
+.wrapper > header section#photo { width: 20.45455%; float: left; margin-right: 2.27273%; display: inline; }
+.wrapper > header section#name-job-social { width: 77.27273%; float: right; margin-right: 0; #margin-left: -1em; display: inline; margin-top: 0.5em; }
+.wrapper > header section#name-job-social hgroup { margin-bottom: 1em; }
+.wrapper > header section#name-job-social hgroup h1 { font-size: 2em; margin-bottom: 0.25em; }
+.wrapper > header section#name-job-social hgroup h2 { font-size: 1.25em; margin-bottom: 0; }
+.wrapper > header section#name-job-social nav ul { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; }
+.wrapper > header section#name-job-social nav ul li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
+.wrapper > header section#name-job-social nav ul li { margin: 0 1em 0 0; }
+.wrapper > header section#name-job-social nav ul li:last-of-type { margin: 0; }
+.wrapper > header section#name-job-social nav ul li a { text-decoration: none; }
+.wrapper > header section#name-job-social nav ul li a:hover { text-decoration: underline; }
+
+.wrapper > section header { margin-bottom: 1em; }
+.wrapper > section header h1 { font-size: 2em; padding-bottom: 0.25em; border-bottom: 2px solid lightgray; }
+.wrapper > section h2 { display: inline; font-size: 1.25em; }
+.wrapper > section ul { list-style: none; margin: 0; padding: 0; }
+.wrapper > section ul li { list-style-image: none; list-style-type: none; margin-left: 0; }
+.wrapper > section time { font-size: 0.9em; background: #eee; padding: 0 0.5em; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; float: right; }
