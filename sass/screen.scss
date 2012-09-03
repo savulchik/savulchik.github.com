@@ -7,14 +7,64 @@
 
 $blueprint-font-size: 14px;
 
-$total-columns: 9;
+$total-columns: 12;
 $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
 @include blueprint-typography;
 
-@mixin social-profile {
+.wrapper {
+  @include container;
+  //@include susy-grid-background;
+  margin: 2em auto 4em;
+}
+
+header, footer {
+  clear: both;
+}
+
+nav#main {
+  @include pull(3);
+  @include span-columns(3);
+
+  ul {
+    @include float-right;
+    @include no-bullets;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#photo {
+  @include pre(3);
+  @include span-columns(2);
+
+  img {
+    border: 1px solid lightgray;
+    padding: 0.5em;
+  }
+}
+
+hgroup#name {
+  @include span-columns(7 omega);
+
+  margin: 0.5em 0 1em;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+    margin-bottom: 0;
+  }
+}
+
+nav#social {
+  @include span-columns(7 omega);
+
   ul {
     @include inline-block-list;
 
@@ -32,81 +82,61 @@ $grid-padding: $gutter-width;
   }
 }
 
-.wrapper {
-  @include container;
-  margin: 2em auto 4em;
-}
-
-header, footer {
-  clear: both;
-}
-
 .wrapper > header {
   @include pie-clearfix;
 
   margin-bottom: 4em;
+}
 
-  img {
-    border: 1px solid lightgray;
-    padding: 0.5em;
-  }
+section#education, section#career, section#skills, section#personality, section#reference {
+  @include pre(3);
+  @include span-columns(9 omega);
 
-  section#photo {
-    @include span-columns(2);
-  }
+  margin-bottom: 4em;
 
-  section#name-job-social {
-    @include span-columns(7 omega);
-
-    margin-top: 0.5em;
-
-    hgroup {
-      margin-bottom: 1em;
-
-      h1 {
-        font-size: 2em;
-        margin-bottom: 0.25em;
-      }
-
-      h2 {
-        font-size: 1.25em;
-        margin-bottom: 0;
-      }
-    }
-
-    nav {
-      @include social-profile;
-    }
+  h1 {
+    font-size: 2em;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid lightgray;
   }
 }
 
-.wrapper > section {
-  header {
-    margin-bottom: 1em;
+section.degree, section.job {
+  @include pie-clearfix;
 
-    h1 {
-      font-size: 2em;
-      padding-bottom: 0.25em;
-      border-bottom: 2px solid lightgray;
-    }
+  margin-bottom: 2em;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   h2 {
-    display: inline;
+    @include inline-block;
+    margin-bottom: 0.5em;
     font-size: 1.25em;
   }
 
-  ul {
-    @include no-bullets;
-    margin: 0;
-    padding: 0;
-  }
-
-  time {
+  span.period {
     font-size: 0.9em;
     background: #eee;
     padding: 0 0.5em;
     @include border-radius(5px);
     float: right;
+    margin: 0 0.25em;
+  }
+
+  dl {
+    @include pie-clearfix;
+    margin: 0;
+  }
+
+  dt {
+    @include span-columns(2, 9);
+    color: #aaa;
+  }
+
+  dd {
+    margin: 0;
+    @include span-columns(7 omega, 9);
   }
 }
