@@ -91,16 +91,19 @@ caption { background: #eeeeee; }
 
 .loud { color: #111111; }
 
-.wrapper { *zoom: 1; max-width: 59em; _width: 59em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; margin: 2em auto 4em; }
+.wrapper { *zoom: 1; max-width: 59em; _width: 59em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; padding: 2em 0 4em; margin: 0 auto; }
 .wrapper:after { content: ""; display: table; clear: both; }
 
 header, footer { clear: both; }
 
-nav#main { margin-left: -25.42373%; width: 23.72881%; float: left; margin-right: 1.69492%; display: inline; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+nav#main { width: 15.25424%; float: left; margin-right: 1.69492%; display: inline; text-align: right; }
 nav#main ul { display: inline; float: right; list-style: none; margin: 0; padding: 0; }
 nav#main ul li { list-style-image: none; list-style-type: none; margin-left: 0; }
 
-#photo { margin-left: 25.42373%; width: 15.25424%; float: left; margin-right: 1.69492%; display: inline; }
+#photo { margin-left: 8.47458%; width: 15.25424%; float: left; margin-right: 1.69492%; display: inline; }
 #photo img { border: 1px solid lightgray; padding: 0.5em; }
 
 hgroup#name { width: 57.62712%; float: right; margin-right: 0; #margin-left: -1em; display: inline; margin: 0.5em 0 1em; }
@@ -112,21 +115,23 @@ nav#social ul { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; }
 nav#social ul li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
 nav#social ul li { margin: 0 1em 0 0; }
 nav#social ul li:last-of-type { margin: 0; }
-nav#social ul li a { text-decoration: none; }
-nav#social ul li a:hover { text-decoration: underline; }
 
 .wrapper > header { *zoom: 1; margin-bottom: 4em; }
 .wrapper > header:after { content: ""; display: table; clear: both; }
 
-section#education, section#career, section#skills, section#personality, section#reference { margin-left: 25.42373%; width: 74.57627%; float: right; margin-right: 0; #margin-left: -1em; display: inline; margin-bottom: 4em; }
-section#education h1, section#career h1, section#skills h1, section#personality h1, section#reference h1 { font-size: 2em; padding-bottom: 0.25em; border-bottom: 2px solid lightgray; }
+section#education, section#career, section#skills, section#personality, section#reference { margin-left: 25.42373%; width: 74.57627%; float: right; margin-right: 0; #margin-left: -1em; display: inline; margin-bottom: 3em; }
+section#education header, section#career header, section#skills header, section#personality header, section#reference header { padding-bottom: 0.25em; border-bottom: 2px solid lightgray; margin: 1em 0; }
+section#education header h1, section#career header h1, section#skills header h1, section#personality header h1, section#reference header h1 { font-size: 2em; display: inline; }
+section#education header a, section#career header a, section#skills header a, section#personality header a, section#reference header a { float: right; }
 
 section.degree, section.job { *zoom: 1; margin-bottom: 2em; }
 section.degree:after, section.job:after { content: ""; display: table; clear: both; }
 section.degree:last-child, section.job:last-child { margin-bottom: 0; }
 section.degree h2, section.job h2 { display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; margin-bottom: 0.5em; font-size: 1.25em; }
-section.degree span.period, section.job span.period { font-size: 0.9em; background: #eee; padding: 0 0.5em; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; float: right; margin: 0 0.25em; }
-section.degree dl, section.job dl { *zoom: 1; margin: 0; }
-section.degree dl:after, section.job dl:after { content: ""; display: table; clear: both; }
-section.degree dt, section.job dt { width: 20.45455%; float: left; margin-right: 2.27273%; display: inline; color: #aaa; }
-section.degree dd, section.job dd { margin: 0; width: 77.27273%; float: right; margin-right: 0; #margin-left: -1em; display: inline; }
+section.degree span.period, section.job span.period { font-size: 0.9em; background: #eee; padding: 0 0.5em; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; float: right; }
+section.degree .row, section.job .row { *zoom: 1; }
+section.degree .row:after, section.job .row:after { content: ""; display: table; clear: both; }
+section.degree .row h3, section.job .row h3 { margin-left: -34.09091%; width: 20.45455%; float: left; margin-right: 2.27273%; display: inline; margin-right: 11.36364%; font-size: 1.25em; color: #ccc; margin-bottom: 0; text-align: right; }
+section.degree .row p, section.job .row p { width: 100%; float: right; margin-right: 0; #margin-left: -1em; display: inline; margin-bottom: 0; }
+
+.wrapper > footer { margin-left: 25.42373%; width: 74.57627%; float: right; margin-right: 0; #margin-left: -1em; display: inline; }

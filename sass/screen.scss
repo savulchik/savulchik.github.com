@@ -17,16 +17,20 @@ $grid-padding: $gutter-width;
 .wrapper {
   @include container;
   //@include susy-grid-background;
-  margin: 2em auto 4em;
+  padding: 2em 0 4em;
+  margin: 0 auto;
 }
 
 header, footer {
   clear: both;
 }
 
+a {
+  @include hover-link;
+}
+
 nav#main {
-  @include pull(3);
-  @include span-columns(3);
+  @include span-columns(2);
 
   ul {
     @include float-right;
@@ -34,10 +38,12 @@ nav#main {
     margin: 0;
     padding: 0;
   }
+
+  text-align: right;
 }
 
 #photo {
-  @include pre(3);
+  @include pre(1);
   @include span-columns(2);
 
   img {
@@ -74,10 +80,6 @@ nav#social {
       &:last-of-type {
         margin: 0
       }
-
-      a {
-        @include hover-link;
-      }
     }
   }
 }
@@ -92,12 +94,21 @@ section#education, section#career, section#skills, section#personality, section#
   @include pre(3);
   @include span-columns(9 omega);
 
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 
-  h1 {
-    font-size: 2em;
+  header {
     padding-bottom: 0.25em;
     border-bottom: 2px solid lightgray;
+    margin: 1em 0;
+
+    h1 {
+      font-size: 2em;
+      display: inline;
+    }
+
+    a {
+      float: right;
+    }
   }
 }
 
@@ -122,21 +133,30 @@ section.degree, section.job {
     padding: 0 0.5em;
     @include border-radius(5px);
     float: right;
-    margin: 0 0.25em;
   }
 
-  dl {
+  .row {
     @include pie-clearfix;
-    margin: 0;
-  }
 
-  dt {
-    @include span-columns(2, 9);
-    color: #aaa;
-  }
+    h3 {
+      @include pull(3, 9);
+      @include span-columns(2, 9);
+      @include post(1, 9);
 
-  dd {
-    margin: 0;
-    @include span-columns(7 omega, 9);
+      font-size: 1.25em;
+      color: #ccc;
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    p {
+      @include span-columns(9 omega, 9);
+      margin-bottom: 0;
+    }
   }
+}
+
+.wrapper > footer {
+  @include pre(3);
+  @include span-columns(9 omega);
 }
