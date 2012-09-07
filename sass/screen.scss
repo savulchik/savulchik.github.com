@@ -205,3 +205,12 @@ ul.technologies {
   @include pre(3);
   @include span-columns(9 omega);
 }
+
+a[href="#page-top"] {
+  font-size: 0.9em;
+
+  &:after {
+    content: "↑";
+    margin: 0 0 0 0.25em;
+  }
+}

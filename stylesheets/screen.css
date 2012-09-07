@@ -148,3 +148,6 @@ ul.technologies li:after { content: "·"; margin: 0 0 0 0.25em; }
 ul.technologies li:last-child:after { content: ""; margin: 0; }
 
 .wrapper > footer { margin-left: 25.42373%; width: 74.57627%; float: right; margin-right: 0; #margin-left: -1em; display: inline; }
+
+a[href="#page-top"] { font-size: 0.9em; }
+a[href="#page-top"]:after { content: "↑"; margin: 0 0 0 0.25em; }
