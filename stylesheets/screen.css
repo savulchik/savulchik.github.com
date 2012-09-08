@@ -151,3 +151,12 @@ ul.technologies li:last-child:after { content: ""; margin: 0; }
 
 a[href="#page-top"] { font-size: 0.9em; }
 a[href="#page-top"]:after { content: "↑"; margin: 0 0 0 0.25em; }
+
+section.skill { width: 31.81818%; float: left; margin-right: 2.27273%; display: inline; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; *zoom: 1; background-color: #eee; margin-bottom: 1em; }
+section.skill:nth-child(3n) { float: right; margin-right: 0; #margin-left: -1em; display: inline; }
+section.skill:after { content: ""; display: table; clear: both; }
+section.skill .content { padding: 1em; }
+section.skill p { margin-bottom: 0; }
+section.skill h3 { text-align: center; }
+section.skill ul { list-style-type: circle; }
+section.skill ul:last-child { margin-bottom: 0; }
