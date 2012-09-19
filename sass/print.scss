@@ -5,8 +5,14 @@
 @import "compass/typography/links/unstyled-link";
 @import "compass/typography/lists";
 
+//
+// Настройки blueprint typography
+//
 @include blueprint-print;
 
+//
+// Параметры страницы
+//
 @page {
   margin: 1cm;
 }
@@ -15,42 +21,24 @@
   margin-top: 2cm;
 }
 
-body {
-  font-size: 8pt;
-}
+//
+// Стили по умолчанию
+//
+body { font-size: 8pt; }
+h1 { margin: 0; font-size: 2em; font-weight: normal; }
+h2 { margin: 0; font-size: 1.25em; font-weight: normal; }
+h3 { margin: 0; font-size: 1em; }
+a, a:link, a:visited, a:active, a:hover { @include unstyled-link; font-weight: normal; }
+i { font-style: italic; }
+ul { list-style: circle; margin: 0; }
+address { font-style: normal; }
 
-h1 {
-  font-size: 2em;
-  font-weight: normal;
-}
-
-h2 {
-  font-size: 1.25em;
-  font-weight: normal;
-}
-
-h3 {
-  font-size: 1em;
-}
-
-a, a:link, a:visited, a:active, a:hover {
-  @include unstyled-link;
-
-  font-weight: normal;
-}
-
-i {
-  font-style: italic;
-}
-
-ul {
-  list-style: circle;
-  padding-left: 1.5em;
-}
-
+//
+// Расположение элементов
+//
 .wrapper > header {
-  position: relative;
   @include pie-clearfix;
+  position: relative;
   height: 3.5cm;
 }
 
@@ -64,7 +52,7 @@ nav#main {
   left: 0;
 
   img {
-    border: 1px solid lightgray;
+    border-width: 1px;
     padding: 0.2cm;
     width: 2.25cm;
     height: 2.25cm;
@@ -79,62 +67,34 @@ nav#main {
 
 hgroup#name {
   margin-bottom: 1em;
-
-  h1, h2 {
-    margin: 0;
-  }
-
-  h2 {
-    font-style: italic;
-  }
 }
 
-address {
-  font-style: normal;
-
-  span#email, span#tel {
-    display: block;
-  }
+span#email, span#tel {
+  display: block;
 }
-
 
 nav#social {
   display: none;
+}
+
+.wrapper > section {
+  @include pie-clearfix;
+
+  margin-bottom: 3em;
+
+  & > header {
+    border-width: 2px;
+    margin-bottom: 1em;
+  }
 }
 
 a[href="#page-top"] {
   display: none;
 }
 
-section#education,
-section#career,
-section#skills,
-section#personality,
-section#reference {
-  @include pie-clearfix;
-
-  margin-bottom: 3em;
-
-  & > header {
-    h1 {
-      margin-bottom: 0;
-    }
-
-    display: block;
-    border-bottom: 2px solid lightgray;
-    margin-bottom: 1em;
-  }
-}
-
-span.period {
-  @include quiet;
-}
-
 section.degree, section.job {
-  page-break-inside: avoid;
-
   @include pie-clearfix;
-
+  page-break-inside: avoid;
   margin-bottom: 2em;
 
   &:last-child {
@@ -147,45 +107,56 @@ section.degree, section.job {
 
   h2 {
     display: inline;
-    margin: 0 1em 0 0;
-  }
-}
-
-.row {
-  h3 {
-    display: inline-block;
-    margin: 0;
-    width: 3.5cm;
-  }
-
-  p {
-    display: inline;
-    margin-bottom: 0;
-  }
-}
-
-section.job {
-  h3 {
-    @include quiet;
-    font-style: italic;
+    margin-right: 1em;
   }
 
   p { margin-bottom: 0.5em; }
 }
 
+.row h3 {
+  display: inline-block;
+  margin: 0;
+  width: 2.5cm;
+}
+
 ul.technologies {
   @include inline-list;
+}
+
+//
+// Дизайн
+//
+#photo img {
+  border-style: solid;
+  border-color: lightgray;
+}
+
+hgroup#name h2 {
+  font-style: italic;
+}
+
+.wrapper > section > header {
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+}
+
+span.period {
+  @include quiet;
+  font-size: 0.9em;
+}
+
+section.job h3 {
+  @include quiet;
+  font-style: italic;
+}
+
+ul.technologies {
   @include no-bullets;
   @include quiet;
 
-  margin: 0;
-  padding: 0;
   font-size: 0.8em;
 
   li {
-    margin: 0;
-    padding: 0;
-
     &:after {
       content: "·";
       margin: 0 0 0 0.25em;
@@ -196,4 +167,8 @@ ul.technologies {
       margin: 0;
     }
   }
+}
+
+section#personality ul {
+  padding-left: 1.5em;
 }

@@ -139,16 +139,19 @@ body {
 }
 
 h1 {
+  margin: 0;
   font-size: 2em;
   font-weight: normal;
 }
 
 h2 {
+  margin: 0;
   font-size: 1.25em;
   font-weight: normal;
 }
 
 h3 {
+  margin: 0;
   font-size: 1em;
 }
 
@@ -168,12 +171,16 @@ i {
 
 ul {
   list-style: circle;
-  padding-left: 1.5em;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
 }
 
 .wrapper > header {
-  position: relative;
   *zoom: 1;
+  position: relative;
   height: 3.5cm;
 }
 .wrapper > header:after {
@@ -192,7 +199,7 @@ nav#main {
   left: 0;
 }
 #photo img {
-  border: 1px solid lightgray;
+  border-width: 1px;
   padding: 0.2cm;
   width: 2.25cm;
   height: 2.25cm;
@@ -207,17 +214,8 @@ nav#main {
 hgroup#name {
   margin-bottom: 1em;
 }
-hgroup#name h1, hgroup#name h2 {
-  margin: 0;
-}
-hgroup#name h2 {
-  font-style: italic;
-}
 
-address {
-  font-style: normal;
-}
-address span#email, address span#tel {
+span#email, span#tel {
   display: block;
 }
 
@@ -225,51 +223,27 @@ nav#social {
   display: none;
 }
 
-a[href="#page-top"] {
-  display: none;
-}
-
-section#education,
-section#career,
-section#skills,
-section#personality,
-section#reference {
+.wrapper > section {
   *zoom: 1;
   margin-bottom: 3em;
 }
-section#education:after,
-section#career:after,
-section#skills:after,
-section#personality:after,
-section#reference:after {
+.wrapper > section:after {
   content: "";
   display: table;
   clear: both;
 }
-section#education > header,
-section#career > header,
-section#skills > header,
-section#personality > header,
-section#reference > header {
-  display: block;
-  border-bottom: 2px solid lightgray;
+.wrapper > section > header {
+  border-width: 2px;
   margin-bottom: 1em;
 }
-section#education > header h1,
-section#career > header h1,
-section#skills > header h1,
-section#personality > header h1,
-section#reference > header h1 {
-  margin-bottom: 0;
-}
 
-span.period {
-  color: #666666;
+a[href="#page-top"] {
+  display: none;
 }
 
 section.degree, section.job {
-  page-break-inside: avoid;
   *zoom: 1;
+  page-break-inside: avoid;
   margin-bottom: 2em;
 }
 section.degree:after, section.job:after {
@@ -285,48 +259,60 @@ section.degree > header, section.job > header {
 }
 section.degree h2, section.job h2 {
   display: inline;
-  margin: 0 1em 0 0;
+  margin-right: 1em;
+}
+section.degree p, section.job p {
+  margin-bottom: 0.5em;
 }
 
 .row h3 {
   display: inline-block;
   margin: 0;
-  width: 3.5cm;
-}
-.row p {
-  display: inline;
-  margin-bottom: 0;
-}
-
-section.job h3 {
-  color: #666666;
-  font-style: italic;
-}
-section.job p {
-  margin-bottom: 0.5em;
+  width: 2.5cm;
 }
 
 ul.technologies {
   list-style-type: none;
-  list-style: none;
-  color: #666666;
-  margin: 0;
-  padding: 0;
-  font-size: 0.8em;
 }
 ul.technologies, ul.technologies li {
   margin: 0px;
   padding: 0px;
   display: inline;
 }
+
+#photo img {
+  border-style: solid;
+  border-color: lightgray;
+}
+
+hgroup#name h2 {
+  font-style: italic;
+}
+
+.wrapper > section > header {
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+}
+
+span.period {
+  color: #666666;
+  font-size: 0.9em;
+}
+
+section.job h3 {
+  color: #666666;
+  font-style: italic;
+}
+
+ul.technologies {
+  list-style: none;
+  color: #666666;
+  font-size: 0.8em;
+}
 ul.technologies li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
-}
-ul.technologies li {
-  margin: 0;
-  padding: 0;
 }
 ul.technologies li:after {
   content: "·";
@@ -335,4 +321,8 @@ ul.technologies li:after {
 ul.technologies li:last-child:after {
   content: "";
   margin: 0;
+}
+
+section#personality ul {
+  padding-left: 1.5em;
 }
