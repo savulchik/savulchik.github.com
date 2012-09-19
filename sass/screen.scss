@@ -3,6 +3,7 @@
 @import "compass/css3/border-radius";
 @import "compass/typography/lists";
 @import "compass/typography/links/hover-link";
+@import "compass/css3/images";
 @import "susy";
 
 $blueprint-font-size: 14px;
@@ -16,6 +17,10 @@ $grid-padding: $gutter-width;
 
 i {
   font-style: italic;
+}
+
+ul {
+  list-style: circle;
 }
 
 .wrapper {
@@ -33,6 +38,27 @@ a {
   @include hover-link;
 }
 
+address {
+  @include span-columns(6 omega);
+
+  font-style: normal;
+
+  span#email, span#tel {
+    display: block;
+    padding: 0 0 0 25px;
+  }
+
+  span#email {
+    background: url(../images/email.png) no-repeat left center;
+  }
+
+  span#tel {
+    background: url(../images/phone.png) no-repeat left center;
+  }
+
+  margin-bottom: 1.5em;
+}
+
 nav#main {
   @include span-columns(2);
 
@@ -48,16 +74,18 @@ nav#main {
 
 #photo {
   @include pre(1);
-  @include span-columns(2);
+  @include span-columns(3);
 
   img {
     border: 1px solid lightgray;
     padding: 0.5em;
+    width: 160px;
+    height: 160px;
   }
 }
 
 hgroup#name {
-  @include span-columns(7 omega);
+  @include span-columns(6 omega);
 
   margin: 0.5em 0 1em;
 
@@ -69,11 +97,12 @@ hgroup#name {
   h2 {
     font-size: 1.25em;
     margin-bottom: 0;
+    font-style: italic;
   }
 }
 
 nav#social {
-  @include span-columns(7 omega);
+  @include span-columns(6 omega);
 
   ul {
     @include inline-block-list;
@@ -94,13 +123,20 @@ nav#social {
   margin-bottom: 4em;
 }
 
-section#education, section#career, section#skills, section#personality, section#reference {
+section#education,
+section#career,
+section#skills,
+section#personality,
+section#reference {
+
   @include pre(3);
   @include span-columns(9 omega);
 
   margin-bottom: 3em;
 
   & > header {
+    position: relative;
+
     padding-bottom: 0.25em;
     border-bottom: 2px solid lightgray;
     margin: 1em 0;
@@ -111,32 +147,11 @@ section#education, section#career, section#skills, section#personality, section#
     }
 
     a {
-      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 2.5;
     }
-  }
-}
-
-section.degree, section.job {
-  @include pie-clearfix;
-
-  margin-bottom: 3em;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    @include inline-block;
-    margin-bottom: 0.5em;
-    font-size: 1.25em;
-  }
-
-  span.period {
-    font-size: 0.9em;
-    background: #eee;
-    padding: 0 0.5em;
-    @include border-radius(5px);
-    float: right;
   }
 
   .row {
@@ -147,7 +162,8 @@ section.degree, section.job {
       @include span-columns(2, 9);
       @include post(1, 9);
 
-      font-size: 1.25em;
+      font-size: 1.1em;
+      line-height: 1.4;
       color: #ccc;
       margin-bottom: 0;
       text-align: right;
@@ -157,6 +173,38 @@ section.degree, section.job {
       @include span-columns(9 omega, 9);
       margin-bottom: 0;
     }
+  }
+}
+
+section.degree, section.job {
+  header {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  @include pie-clearfix;
+
+  margin-bottom: 3em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    display: inline;
+    margin-bottom: 0;
+    font-size: 1.25em;
+  }
+
+  span.period {
+    @include quiet;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1.9;
+    //background: #eee;
+    //padding: 0 0.5em;
+    //@include border-radius(5px);
   }
 }
 
@@ -216,31 +264,42 @@ a[href="#page-top"] {
 }
 
 section.skill {
-  @include span-columns(3, 9);
-  @include nth-omega(3n);
-  @include border-radius(10px);
-  @include pie-clearfix;
-
-  background-color: #eee;
-  margin-bottom: 1em;
-
-  .content {
-    padding: 1em;
+  h2 {
+    font-size: 1.25em;
   }
+  //@include pie-clearfix;
+//
+//  margin-bottom: 2em;
+//
+//  &:last-child {
+//    margin-bottom: 0;
+//  }
+}
 
-  p {
-    margin-bottom: 0;
-  }
+//section.lang {
+//  @include span-columns(3, 9);
+//  @include pie-clearfix;
+//  @include border-radius(10px);
+//
+//  background-color: #eee;
+//
+//  h4 {
+//    text-align: center;
+//    margin: 0.8em;
+//  }
+//
+//  ul {
+//    list-style-type: circle;
+//    margin: 0 0.8em 0.8em;
+//  }
+//
+//  &:last-child {
+//    @include omega;
+//  }
+//}
 
-  h3 {
-    text-align: center;
-  }
-
+section#personality {
   ul {
-    list-style-type: circle;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin: 0;
   }
 }

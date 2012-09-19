@@ -4,12 +4,8 @@
   <meta charset="utf-8">
   <title>резюме://Савульчик_Станислав</title>
 
-  <link href="stylesheets/screen.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
-  <!--<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />-->
-
-  <!--[if IE]>
-  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
+  <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -22,27 +18,34 @@
       <ul>
         <li><a href="#education">Образование</a></li>
         <li><a href="#career">Опыт работы</a></li>
-        <li><a href="#skills">Навыки и компетенции</a></li>
+        <li><a href="#skills">Компетенции</a></li>
         <li><a href="#personality">Личные качества</a></li>
         <li><a href="#reference">Рекомендации</a></li>
       </ul>
     </nav>
 
     <div id="photo">
-      <img src="images/photo.jpg" height="100" width="100" />
+      <img src="images/photo.jpg" />
     </div>
 
-    <hgroup id="name">
-      <h1>Савульчик Станислав</h1>
-      <h2>Инженер-программист</h2>
-    </hgroup>
+    <div class="essential-elements">
+      <hgroup id="name">
+        <h1>Савульчик Станислав</h1>
+        <h2>Инженер-программист</h2>
+      </hgroup>
 
-    <nav id="social">
-      <ul>
-        <li><a href="https://github.com/savulchik">Я на Github</a></li>
-        <li><a href="https://www.codeschool.com/users/savulchik">Я на Codeschool</a></li>
-      </ul>
-    </nav>
+      <address>
+        <span id="email">s.savu<span style="display: none">foo</span>lchik@gm<span style="display: none;">bar</span>ail.com</span>
+        <span id="tel">+7 923 243 9981</span>
+      </address>
+
+      <nav id="social">
+        <ul>
+          <li><a href="https://github.com/savulchik">Я на Github</a></li>
+          <li><a href="https://www.codeschool.com/users/savulchik">Я на Codeschool</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section id="education">
@@ -52,77 +55,73 @@
     </header>
 
     <section class="degree">
-      <h2>Магистр техники и технологий</h2>
-      <span class="period">2008 – 2010</span>
+      <header>
+        <h2>Магистр техники и технологий</h2>
+        <span class="period">2008 – 2010</span>
+      </header>
 
       <div class="row">
         <h3>ВУЗ</h3>
-        <p>Новосибирский государственный технический университет (НГТУ).</p>
+        <span>Новосибирский государственный технический университет (НГТУ).</span>
       </div>
 
       <div class="row">
         <h3>Факультет</h3>
-        <p>Автоматики и вычислительной техники (АВТФ).</p>
-      </div>
-
-      <div class="row">
-        <h3>Направление</h3>
-        <p>Информатика и вычислительная техника.</p>
+        <span>Автоматики и вычислительной техники (АВТФ).</span>
       </div>
 
       <div class="row">
         <h3>Программа</h3>
-        <p>Неоднородные информационные системы.</p>
+        <span>Неоднородные информационные системы.</span>
       </div>
 
       <div class="row">
         <h3>Достижения</h3>
-        <p><i>Признан лучшим выпускником</i> кафедры Вычислительной техники 2010.</p>
+        <span><i>Признан лучшим выпускником</i> кафедры Вычислительной техники 2010.</span>
       </div>
     </section>
 
     <section class="degree">
-      <h2>Переводчик в сфере профессиональной коммуникации</h2>
-      <span class="period">2006 – 2009</span>
+      <header>
+        <h2>Переводчик в сфере профессиональной коммуникации</h2>
+        <span class="period">2006 – 2009</span>
+      </header>
 
       <div class="row">
         <h3>ВУЗ</h3>
-        <p>Новосибирский государственный технический университет.</p>
+        <span>Новосибирский государственный технический университет.</span>
       </div>
 
       <div class="row">
         <h3>Факультет</h3>
-        <p>Гуманитарного образования.</p>
+        <span>Гуманитарного образования.</span>
       </div>
 
       <div class="row">
         <h3>Специализация</h3>
-        <p>Письменный перевод технических текстов с английского на русский язык.</p>
+        <span>Письменный перевод технических текстов с английского на русский язык.</span>
       </div>
     </section>
 
     <section class="degree">
-      <h2>Бакалавр техники и технологий</h2>
-      <span class="period">2004 – 2008</span>
+      <header>
+        <h2>Бакалавр техники и технологий</h2>
+        <span class="period">2004 – 2008</span>
+      </header>
 
       <div class="row">
         <h3>ВУЗ</h3>
-        <p>Новосибирский государственный технический университет.</p>
+        <span>Новосибирский государственный технический университет.</span>
       </div>
 
       <div class="row">
         <h3>Факультет</h3>
-        <p>Автоматики и вычислительной техники.</p>
-      </div>
-
-      <div class="row">
-        <h3>Направление</h3>
-        <p>Информатика и вычислительная техника.</p>
+        <span>Автоматики и вычислительной техники.</span>
       </div>
 
       <div class="row">
         <h3>Специальность</h3>
-        <p>Вычислительные машины, комплексы, системы и сети.</p>
+        <span>Вычислительные машины, комплексы, системы и сети.</span>
       </div>
     </section>
   </section>
@@ -132,7 +131,6 @@
       <h1>Опыт работы</h1>
       <a href="#page-top">В начало</a>
     </header>
-
 
     <section class="job">
       <header>
@@ -149,15 +147,16 @@
         <li>Groovy</li>
         <li>JavaScript</li>
         <li>Ruby</li>
-        <li>PL/SQL</li>
+        <li>Oracle PL/SQL</li>
         <li>Hibernate</li>
         <li>Spring Framework</li>
         <li>Apache Wicket</li>
+        <li>JasperReports</li>
         <li>Apache CXF</li>
         <li>jQuery</li>
         <li>HTML</li>
         <li>CSS</li>
-        <li>SASS</li>
+        <li>Sass</li>
         <li>Compass</li>
       </ul>
     </section>
@@ -169,12 +168,12 @@
         <h3>Инженер-программист</h3>
       </header>
 
-      <p> Разработка <a href="http://www.gosuslugi.ru">портала</a> государственных услуг в рамках проекта «Электронное правительство».</p>
+      <p>Разработка <a href="http://www.gosuslugi.ru">портала</a> государственных услуг в рамках проекта «Электронное правительство».</p>
 
       <ul class="technologies">
         <li>Java</li>
         <li>JavaScript</li>
-        <li>PL/SQL</li>
+        <li>Oracle PL/SQL</li>
         <li>Spring Framework</li>
         <li>Freemarker</li>
         <li>jQuery</li>
@@ -190,12 +189,13 @@
         <h3>Веб-разработчик, программист</h3>
       </header>
 
-      <p>Разработка и поддержка многофункциональной биллинговой системы для автоматизации деятельности предприятий ЖКХ.</p>
+      <p>Разработка и поддержка многофункциональной биллинговой системы для автоматизации деятельности предприятий сферы ЖКХ.</p>
 
       <ul class="technologies">
         <li>Java</li>
+        <li>Groovy</li>
         <li>JavaScript</li>
-        <li>PL/SQL</li>
+        <li>Oracle PL/SQL</li>
         <li>Hibernate</li>
         <li>Spring Framework</li>
         <li>Apache Wicket</li>
@@ -211,7 +211,7 @@
         <h3>Программист</h3>
       </header>
 
-      <p>Разработка и внедрение системы мониторинга спутниковых модемов в ИТ-инфраструктуре интернет-провайдера.</p>
+      <p>Разработка и внедрение системы мониторинга спутниковых модемов в ИТ-инфраструктуру интернет-провайдера.</p>
 
       <ul class="technologies">
         <li>PHP</li>
@@ -226,74 +226,141 @@
 
   <section id="skills">
     <header>
-      <h1>Навыки и компетенции</h1>
+      <h1>Профессиональные компетенции</h1>
       <a href="#page-top">В начало</a>
     </header>
 
-    <div>
-      <section class="skill">
-        <div class="content">
-          <h3>Java</h3>
+    <!--<section class="skill">-->
+      <!--<h2>Планирование процесса разработки ПО</h2>-->
 
-          <ul>
-            <li>JDK 7</li>
-            <li>Hibernate</li>
-            <li>Spring Framework</li>
-            <li>Apache Wicket</li>
-            <li>Freemarker</li>
-          </ul>
-        </div>
-      </section>
+      <!--<ul>-->
+        <!--<li>Работа с техническим заданием</li>-->
+        <!--<li>Декомпозиция больших задач на меньшие подзадачи</li>-->
+        <!--<li>Оценивание трудозатрат</li>-->
+      <!--</ul>-->
+    <!--</section>-->
 
-      <section class="skill">
-        <div class="content">
-          <h3>Ruby</h3>
+    <!--<section class="skill">-->
+      <!--<h2>Проектирование ПО</h2>-->
 
-          <ul>
-            <li>Rack</li>
-            <li>Sinatra</li>
-            <li>Ruby on Rails</li>
-          </ul>
+      <!--<ul>-->
+        <!--<li>Применение шаблонов проектирования в ООП</li>-->
+        <!--<li>Проектирование схемы базы данных</li>-->
+        <!--<li>Проектирование интерфейса пользователя</li>-->
+      <!--</ul>-->
+    <!--</section>-->
 
-          <p>Опыт реализации DSL.</p>
-        </div>
-      </section>
+    <!--<section class="skill">-->
+      <!--<h2>Разработка и поддержка ПО с применением</h2>-->
 
-      <section class="skill">
-        <div class="content">
-          <h3>JavaScript</h3>
+      <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Исправление дефектов</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Рефакторинг исходного кода</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Написание документации</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Применение объектно-ориентированных языков программирования</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Документирование, тестирование и рецензирование исходного кода</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li>Применение языков программирования и технологий:</li>&ndash;&gt;-->
+      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
 
-          <ul>
-            <li>jQuery / jQuery UI</li>
-            <li>Backbone.js</li>
-            <li>Node.js</li>
-          </ul>
-        </div>
-      </section>
+      <!--<section class="lang">-->
+        <!--<h3>Java</h3>-->
 
-      <section class="skill">
-        <div class="content">
-          <h3>HTML5 & CSS3</h3>
+        <!--<ul>-->
+          <!--<li>Hibernate</li>-->
+          <!--<li>Spring Framework</li>-->
+          <!--<li>Apache Wicket</li>-->
+          <!--<li>JUnit / TestNG</li>-->
+          <!--<li>Maven</li>-->
+        <!--</ul>-->
+      <!--</section>-->
 
-          <ul>
-            <li>SASS</li>
-            <li>Compass</li>
-            <li>Susy Grid</li>
-          </ul>
-        </div>
-      </section>
+      <!--<section class="lang">-->
+        <!--<h3>JavaScript</h3>-->
 
-      <section class="skill">
-        <div class="content">
-          <h3>VCS</h3>
+        <!--<ul>-->
+          <!--<li>Coffescript</li>-->
+          <!--<li>jQuery / jQuery UI</li>-->
+          <!--<li>Backbone.js</li>-->
+          <!--<li>JsTestDriver</li>-->
+        <!--</ul>-->
+      <!--</section>-->
 
-          <ul>
-            <li>Git</li>
-            <li>Subversion</li>
-          </ul>
-        </div>
-      </section>
-    </div>
+      <!--<section class="lang">-->
+        <!--<h3>Ruby</h3>-->
+
+        <!--<ul>-->
+          <!--<li>Rack</li>-->
+          <!--<li>Sinatra</li>-->
+          <!--<li>Ruby on Rails</li>-->
+          <!--<li>Minitest / RSpec</li>-->
+          <!--<li>Bundler</li>-->
+        <!--</ul>-->
+      <!--</section>-->
+
+      <!--<section class="lang">-->
+        <!--<h3>HTML 5 & CSS 3</h3>-->
+
+        <!--<ul>-->
+          <!--<li>Semantic Markup</li>-->
+          <!--<li>Layout Grids</li>-->
+          <!--<li>Responsive Design</li>-->
+          <!--<li>Sass & Compass</li>-->
+        <!--</ul>-->
+      <!--</section>-->
+
+      <!--<section class="lang">-->
+        <!--<h3>SQL</h3>-->
+      <!--</section>-->
+    <!--</section>-->
+
+      <!--&lt;!&ndash;<section class="lang">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="content">&ndash;&gt;-->
+          <!--&lt;!&ndash;<h3>HTML5 & CSS3</h3>&ndash;&gt;-->
+
+          <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>Sass</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>Compass</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>Responsive Design</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li>Layout Grids</li>&ndash;&gt;-->
+          <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</section>&ndash;&gt;-->
+<!--&lt;!&ndash;-->
+      <!--<section class="skill">-->
+        <!--<div class="content">-->
+          <!--<h3>VCS</h3>-->
+
+          <!--<ul>-->
+            <!--<li>Git</li>-->
+            <!--<li>Subversion</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</section>-->
+    <!--</div>-->
+
+    <!--<section class="skill">-->
+      <!--<div class="content">-->
+        <!--<h3>SQL</h3>-->
+
+        <!--<ul>-->
+          <!--<li>Transactions</li>-->
+          <!--<li>Constraints</li>-->
+          <!--<li>Indexes</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</section>-->
+
+    <!--<section class="skill">-->
+      <!--<div class="content">-->
+        <!--<h3>DevOps</h3>-->
+
+        <!--<ul>-->
+          <!--<li>Linux</li>-->
+          <!--<li>Chef</li>-->
+          <!--<li>Vagrant</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</section>&ndash;&gt;-->
   </section>
 
   <section id="personality">
@@ -302,7 +369,13 @@
       <a href="#page-top">В начало</a>
     </header>
 
-    <p>TODO</p>
+    <ul>
+      <li>Ответственный</li>
+      <li>Коммуникабельный</li>
+      <li>Умею работать в команде</li>
+      <li>Умею обучаться самостоятельно</li>
+      <li>Довожу работу до логического завершения</li>
+    </ul>
   </section>
 
   <section id="reference">
