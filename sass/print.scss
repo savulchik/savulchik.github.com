@@ -4,6 +4,7 @@
 @import "compass/css3/inline-block";
 @import "compass/typography/links/unstyled-link";
 @import "compass/typography/lists";
+@import "compass/css3/border-radius";
 
 //
 // Настройки blueprint typography
@@ -14,11 +15,7 @@
 // Параметры страницы
 //
 @page {
-  margin: 1cm;
-}
-
-@page:first {
-  margin-top: 2cm;
+  margin: 2cm 1cm;
 }
 
 //
@@ -30,7 +27,7 @@ h2 { margin: 0; font-size: 1.25em; font-weight: normal; }
 h3 { margin: 0; font-size: 1em; }
 a, a:link, a:visited, a:active, a:hover { @include unstyled-link; font-weight: normal; }
 i { font-style: italic; }
-ul { list-style: circle; margin: 0; }
+ul { list-style: circle; margin: 0; padding-left: 1.5em; }
 address { font-style: normal; }
 
 //
@@ -121,6 +118,41 @@ section.degree, section.job {
 
 ul.technologies {
   @include inline-list;
+  padding: 0;
+}
+
+ul#experience {
+  margin-bottom: 2em;
+}
+
+section#skills .row {
+  @include pie-clearfix;
+  clear: both;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+section.skill {
+  border-width: 1px;
+  width: 3.5cm;
+  float: left;
+  margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  & > div {
+    min-width: 100%;
+    margin: 1em;
+  }
 }
 
 //
@@ -169,6 +201,13 @@ ul.technologies {
   }
 }
 
-section#personality ul {
-  padding-left: 1.5em;
+section.skill {
+  @include border-radius(10px);
+  border-style: solid;
+  border-color: lightgray;
+
+  h3 {
+    font-size: 1.25em;
+    text-align: center;
+  }
 }
