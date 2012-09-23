@@ -127,7 +127,7 @@ blockquote {
 }
 
 @page {
-  margin: 2cm 1cm;
+  margin: 2cm;
 }
 
 body {
@@ -178,7 +178,7 @@ address {
 .wrapper > header {
   *zoom: 1;
   position: relative;
-  height: 3.5cm;
+  height: 3.25cm;
 }
 .wrapper > header:after {
   content: "";
@@ -222,7 +222,7 @@ nav#social {
 
 .wrapper > section {
   *zoom: 1;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .wrapper > section:after {
   content: "";
@@ -234,14 +234,14 @@ nav#social {
   margin-bottom: 1em;
 }
 
-a[href="#page-top"] {
+a[href="#page-top"], a.print {
   display: none;
 }
 
 section.degree, section.job {
   *zoom: 1;
   page-break-inside: avoid;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 section.degree:after, section.job:after {
   content: "";

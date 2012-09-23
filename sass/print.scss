@@ -15,7 +15,7 @@
 // Параметры страницы
 //
 @page {
-  margin: 2cm 1cm;
+  margin: 2cm;
 }
 
 //
@@ -36,7 +36,7 @@ address { font-style: normal; }
 .wrapper > header {
   @include pie-clearfix;
   position: relative;
-  height: 3.5cm;
+  height: 3.25cm;
 }
 
 nav#main {
@@ -77,7 +77,7 @@ nav#social {
 .wrapper > section {
   @include pie-clearfix;
 
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 
   & > header {
     border-width: 2px;
@@ -85,14 +85,14 @@ nav#social {
   }
 }
 
-a[href="#page-top"] {
+a[href="#page-top"], a.print {
   display: none;
 }
 
 section.degree, section.job {
   @include pie-clearfix;
   page-break-inside: avoid;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 
   &:last-child {
     margin-bottom: 0;
