@@ -511,13 +511,13 @@ section.skill > div {
 }
 
 span#email {
-  padding-left: 25px;
-  background: url(../images/email.png) no-repeat left center;
+  padding-left: 24px;
+  background: url('../images/email.png?1142175152') no-repeat left;
 }
 
 span#tel {
-  padding-left: 25px;
-  background: url(../images/phone.png) no-repeat left center;
+  padding-left: 24px;
+  background: url('../images/phone.png?1142175368') no-repeat left;
 }
 
 nav#main ul {
@@ -547,9 +547,14 @@ hgroup#name h2 {
   font-size: 0.9em;
   line-height: 2.5;
 }
-.wrapper > section > header a:after {
+.wrapper > section > header a[href="#page-top"]:after {
   content: "↑";
   margin: 0 0 0 0.25em;
+}
+
+a.print {
+  padding-left: 24px;
+  background: url('../images/printer.png?1142175390') no-repeat left;
 }
 
 section.degree .row h3 {

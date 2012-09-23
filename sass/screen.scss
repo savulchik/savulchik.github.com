@@ -23,7 +23,6 @@ $blueprint-font-size: 14px;
 //
 // Переопределение стилей по умолчанию
 //
-
 i { font-style: italic; }
 ul { list-style: circle; margin: 0; }
 a { @include hover-link; }
@@ -32,6 +31,14 @@ h1, h2, h3 { margin-bottom: 0; }
 h1 { font-size: 2em; }
 h2 { font-size: 1.25em; }
 h3 { font-size: 1em ; }
+
+//
+// Mixins
+//
+@mixin image-link($image_path) {
+  padding-left: image-width($image_path) * 1.5;
+  background: image-url($image_path) no-repeat left;
+}
 
 //
 // Расположение элементов
@@ -209,13 +216,11 @@ section.skill {
 // Дизайн
 //
 span#email {
-  padding-left: 25px;
-  background: url(../images/email.png) no-repeat left center;
+  @include image-link("email.png");
 }
 
 span#tel {
-  padding-left: 25px;
-  background: url(../images/phone.png) no-repeat left center;
+  @include image-link("phone.png");
 }
 
 nav#main ul {
@@ -240,11 +245,15 @@ hgroup#name h2 {
     font-size: 0.9em;
     line-height: 2.5;
 
-    &:after {
+    &[href="#page-top"]:after {
       content: "↑";
       margin: 0 0 0 0.25em;
     }
   }
+}
+
+a.print {
+  @include image-link("printer.png");
 }
 
 section.degree .row h3 {
