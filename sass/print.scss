@@ -1,0 +1,213 @@
+@import "compass/reset";
+@import "blueprint/print";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/inline-block";
+@import "compass/typography/links/unstyled-link";
+@import "compass/typography/lists";
+@import "compass/css3/border-radius";
+
+//
+// Настройки blueprint typography
+//
+@include blueprint-print;
+
+//
+// Параметры страницы
+//
+@page {
+  margin: 2cm;
+}
+
+//
+// Стили по умолчанию
+//
+body { font-size: 8pt; }
+h1 { margin: 0; font-size: 2em; font-weight: normal; }
+h2 { margin: 0; font-size: 1.25em; font-weight: normal; }
+h3 { margin: 0; font-size: 1em; }
+a, a:link, a:visited, a:active, a:hover { @include unstyled-link; font-weight: normal; }
+i { font-style: italic; }
+ul { list-style: circle; margin: 0; padding-left: 1.5em; }
+address { font-style: normal; }
+
+//
+// Расположение элементов
+//
+.wrapper > header {
+  @include pie-clearfix;
+  position: relative;
+  height: 3.25cm;
+}
+
+nav#main {
+  display: none;
+}
+
+#photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    border-width: 1px;
+    padding: 0.2cm;
+    width: 2.25cm;
+    height: 2.25cm;
+  }
+}
+
+.essential-elements {
+  position: absolute;
+  top: 0;
+  left: 3.5cm;
+}
+
+hgroup#name {
+  margin-bottom: 1em;
+}
+
+span#email, span#tel {
+  display: block;
+}
+
+nav#social {
+  display: none;
+}
+
+.wrapper > section {
+  @include pie-clearfix;
+
+  margin-bottom: 2em;
+
+  & > header {
+    border-width: 2px;
+    margin-bottom: 1em;
+  }
+}
+
+a[href="#page-top"], a.print {
+  display: none;
+}
+
+section.degree, section.job {
+  @include pie-clearfix;
+  page-break-inside: avoid;
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > header {
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    display: inline;
+    margin-right: 1em;
+  }
+
+  p { margin-bottom: 0.5em; }
+}
+
+.row h3 {
+  display: inline-block;
+  margin: 0;
+  width: 2.5cm;
+}
+
+ul.technologies {
+  @include inline-list;
+  padding: 0;
+}
+
+ul#experience {
+  margin-bottom: 2em;
+}
+
+section#skills .row {
+  @include pie-clearfix;
+  clear: both;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+section.skill {
+  border-width: 1px;
+  width: 3.5cm;
+  float: left;
+  margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  & > div {
+    min-width: 100%;
+    margin: 1em;
+  }
+}
+
+//
+// Дизайн
+//
+#photo img {
+  border-style: solid;
+  border-color: lightgray;
+}
+
+hgroup#name h2 {
+  font-style: italic;
+}
+
+.wrapper > section > header {
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+}
+
+span.period {
+  @include quiet;
+  font-size: 0.9em;
+}
+
+section.job h3 {
+  @include quiet;
+  font-style: italic;
+}
+
+ul.technologies {
+  @include no-bullets;
+  @include quiet;
+
+  font-size: 0.8em;
+
+  li {
+    &:after {
+      content: "·";
+      margin: 0 0 0 0.25em;
+    }
+
+    &:last-child:after {
+      content: "";
+      margin: 0;
+    }
+  }
+}
+
+section.skill {
+  @include border-radius(10px);
+  border-style: solid;
+  border-color: lightgray;
+
+  h3 {
+    font-size: 1.25em;
+    text-align: center;
+  }
+}
